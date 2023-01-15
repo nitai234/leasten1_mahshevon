@@ -41,7 +41,7 @@
             android:text="8"
             android:textSize="60sp"
             android:textColor="#FFFFFF"
-            android:id="@+id/by8"
+            android:id="@+id/bt8"
             />
         <Button
             android:layout_marginLeft="2dp"
@@ -51,7 +51,7 @@
             android:text="9"
             android:textSize="60sp"
             android:textColor="#FFFFFF"
-            android:id="@+id/by9"
+            android:id="@+id/bt9"
             />
         <Button
             android:layout_marginLeft="2dp"
@@ -146,6 +146,16 @@
             android:textSize="60sp"
             android:textColor="#FFFFFF"
             android:id="@+id/bt3"
+            />
+        <Button
+            android:layout_marginLeft="2dp"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#000000"
+            android:text="0"
+            android:textSize="60sp"
+            android:textColor="#FFFFFF"
+            android:id="@+id/bt0"
             />
     </LinearLayout>
 
