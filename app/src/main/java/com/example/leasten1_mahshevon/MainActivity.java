@@ -8,14 +8,16 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
     Button equals, del, plus, minus, mult, div;
-    TextView tvanswer;
+    TextView tvDisplay, tvEquation;
     Button [] buttons;
-    String tv;
-    double answer;
+    String equation = "", display = "";
+    double num1, num2, answer;
 
     protected void onCreate(Bundle savedInstanceState)
     {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         buttons = new Button[]
@@ -35,6 +37,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         minus = findViewById(R.id.btM);
         mult = findViewById(R.id.btK);
         div = findViewById(R.id.btH);
+        tvDisplay = findViewById(R.id.tvDisplay);
+        tvEquation = findViewById(R.id.tvEquation);
 
         for(int i = 0; i < buttons.length; i++)
         {
@@ -51,8 +55,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+
     public void onClick(View view)
     {
+        for(int i = 0; i < buttons.length; i++)
+        {
+            if(view  == buttons[i])
+            {
+                display += buttons[i].getText();
+                tvDisplay.setText(display);
+                return;
+            }
+        }
+        if(view == del)
+        {
+            display = "";
+            tvDisplay.setText(display);
+        }
 
 
 

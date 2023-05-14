@@ -10,12 +10,23 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="45dp"
         android:text="0"
-        android:textSize="90sp"
+        android:textSize="35sp"
         android:textColor="#000000"
         android:background="@android:color/darker_gray"
-        android:id="@+id/tvanswer"
+        android:id="@+id/tvEquation"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="0"
+        android:textSize="85sp"
+        android:textColor="#000000"
+        android:background="@android:color/darker_gray"
+        android:gravity="top"
+        android:id="@+id/tvDisplay"
         />
 
     <LinearLayout
@@ -25,8 +36,9 @@
         >
 
         <Button
-            android:layout_width="100dp"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:backgroundTint="#000000"
             android:text="7"
             android:textSize="60sp"
@@ -35,7 +47,8 @@
             />
         <Button
             android:layout_marginLeft="2dp"
-            android:layout_width="100dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="match_parent"
             android:backgroundTint="#000000"
             android:text="8"
@@ -45,7 +58,8 @@
             />
         <Button
             android:layout_marginLeft="2dp"
-            android:layout_width="100dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="match_parent"
             android:backgroundTint="#000000"
             android:text="9"
@@ -55,7 +69,8 @@
             />
         <Button
             android:layout_marginLeft="2dp"
-            android:layout_width="100dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="match_parent"
             android:backgroundTint="#FF7800"
             android:text="AC"
