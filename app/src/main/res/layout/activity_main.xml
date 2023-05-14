@@ -87,7 +87,8 @@
         >
 
         <Button
-            android:layout_width="100dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="match_parent"
             android:backgroundTint="#000000"
             android:text="4"
@@ -97,7 +98,8 @@
             />
         <Button
             android:layout_marginLeft="2dp"
-            android:layout_width="100dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="match_parent"
             android:backgroundTint="#000000"
             android:text="5"
@@ -107,7 +109,8 @@
             />
         <Button
             android:layout_marginLeft="2dp"
-            android:layout_width="100dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="match_parent"
             android:backgroundTint="#000000"
             android:text="6"
@@ -117,7 +120,8 @@
             />
         <Button
             android:layout_marginLeft="2dp"
-            android:layout_width="100dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="match_parent"
             android:backgroundTint="#4BFF00"
             android:text="="
