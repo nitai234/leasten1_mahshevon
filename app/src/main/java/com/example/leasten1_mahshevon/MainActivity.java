@@ -73,8 +73,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             tvDisplay.setText(display);
         }
 
+        else if(view == plus)
+        {
+            display += " " + plus.getText() + " ";
+            tvDisplay.setText(display);
+        }
 
+        else if(view == minus)
+        {
+            display += " " + minus.getText() + " ";
+            tvDisplay.setText(display);
+        }
 
+        else if(view == div)
+        {
+            display += " " + div.getText() + " ";
+            tvDisplay.setText(display);
+        }
+
+        else if(view == mult)
+        {
+            display += " " + mult.getText() + " ";
+            tvDisplay.setText(display);
+        }
 
     }
 }
