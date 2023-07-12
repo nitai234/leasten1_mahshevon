@@ -12,8 +12,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button equals, del, plus, minus, mult, div;
     TextView tvDisplay, tvEquation;
     Button [] buttons;
-    String equation = "", display = "";
-    double num1, num2, answer;
+    String equation = "", display = "", mathOper = "";
+    int num1, num2, answer;
 
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -58,13 +58,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void onClick(View view)
     {
+
         for(int i = 0; i < buttons.length; i++)
         {
-            if(view  == buttons[i])
-            {
+            if(view  == buttons[i]) {
                 display += buttons[i].getText();
                 tvDisplay.setText(display);
-                return;
+                num1 = Integer.parseInt(display);
             }
         }
         if(view == del)
@@ -75,27 +75,86 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         else if(view == plus)
         {
-            display += " " + plus.getText() + " ";
+            display += " "+plus.getText()+ " ";
             tvDisplay.setText(display);
+            mathOper = "+";
+            equation += display;
+            tvEquation.setText(equation);
+            display = "";
+            tvDisplay.setText(display);
+            num2 = num1;
         }
 
         else if(view == minus)
         {
-            display += " " + minus.getText() + " ";
+            display += " " +minus.getText()+ " ";
             tvDisplay.setText(display);
+            mathOper = "-";
+            equation += display;
+            tvEquation.setText(equation);
+            display = "";
+            tvDisplay.setText(display);
+            num2 = num1;
         }
 
         else if(view == div)
         {
-            display += " " + div.getText() + " ";
+            display += " "+div.getText()+ " ";
             tvDisplay.setText(display);
+            mathOper = "/";
+            equation += display;
+            tvEquation.setText(equation);
+            display = "";
+            tvDisplay.setText(display);
+            num2 = num1;
         }
 
         else if(view == mult)
         {
-            display += " " + mult.getText() + " ";
+            display += " " +mult.getText() + " ";
             tvDisplay.setText(display);
+            mathOper = "*";
+            equation += display;
+            tvEquation.setText(equation);
+            display = "";
+            tvDisplay.setText(display);
+            num2 = num1;
         }
 
+        else if(view == equals)
+        {
+            if(mathOper == "+")
+            {
+                answer = num2 + num1;
+            }
+            else if(mathOper == "-")
+            {
+                answer = num2 - num1;
+            }
+            else if(mathOper == "*")
+            {
+                answer = num2 * num1;
+            }
+            else if(mathOper == "/")
+            {
+                answer = num2 / num1;
+            }
+
+            equation += display;
+            tvEquation.setText(equation);
+            tvDisplay.setText(Integer.toString(answer));
+            equation = "";
+            display = "";
+
+        }
+
+//        if (display.charAt(display.length() - 1) == ' ')
+//        {
+//            equation += display;
+//            tvEquation.setText(equation);
+//            display = "";
+//            tvDisplay.setText(display);
+//            num2 = num1;
+//        }
     }
 }
